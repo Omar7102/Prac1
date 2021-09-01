@@ -1,2 +1,3 @@
-# Prac1
-Repositorio de base de datos 2
+# Prac1 
+Omar Sneider Parra Cali
+Base de datos 2
