@@ -1,1 +1,35 @@
-Esto es un archivo nuevo
+Este es un nuevo archivo
+//operación suma
+int a = 2;
+int b = 3;
+int suma = a+b;
+println("la suma es:" + suma);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
