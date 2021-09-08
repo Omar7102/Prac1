@@ -33,7 +33,7 @@ namespace FormPractica1
         {
             con.Open();
 
-            string query = "Select * from Apoderado where Edad>15";
+            string query = "Select * from Apoderado";
             cmd = new SqlCommand(query, con);
 
             //set the sqlDataAdapter object
@@ -43,7 +43,7 @@ namespace FormPractica1
             DataSet ds = new DataSet();
 
             //fill dataset with query results
-            dadapter.Fill(ds);
+            dAdapter.Fill(ds);
 
             dataGridView1.ReadOnly = true;
 
