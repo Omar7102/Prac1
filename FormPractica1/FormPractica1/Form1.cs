@@ -24,9 +24,18 @@ namespace FormPractica1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            con.Open();
-            MessageBox.Show("Conexión creada con éxito");
-            con.Close();
+            try
+            {
+                con.Open();
+                MessageBox.Show("Conexión creada con éxito");
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al crear la conexión");
+                this.Close();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +55,6 @@ namespace FormPractica1
             dAdapter.Fill(ds);
 
             dataGridView1.ReadOnly = true;
-
             dataGridView1.DataSource = ds.Tables[0];
 
             con.Close();
