@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMPrac1", "ORMPrac1.csproj", "{9B3AEB39-196F-4BB2-A8F8-F473AE54C63C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMPrac1", "ORMPrac1.csproj", "{759331FF-FBDC-4C86-9D60-F9B7603DF5E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B3AEB39-196F-4BB2-A8F8-F473AE54C63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B3AEB39-196F-4BB2-A8F8-F473AE54C63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B3AEB39-196F-4BB2-A8F8-F473AE54C63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B3AEB39-196F-4BB2-A8F8-F473AE54C63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759331FF-FBDC-4C86-9D60-F9B7603DF5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759331FF-FBDC-4C86-9D60-F9B7603DF5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759331FF-FBDC-4C86-9D60-F9B7603DF5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759331FF-FBDC-4C86-9D60-F9B7603DF5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {92DD5C40-263C-4ACE-BBB8-E6E3AF96CD6F}
+		SolutionGuid = {76C1B87A-A648-4F7A-9771-DBE748A9C16C}
 	EndGlobalSection
 EndGlobal
