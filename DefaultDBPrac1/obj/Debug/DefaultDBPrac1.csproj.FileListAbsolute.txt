@@ -1,0 +1,7 @@
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\bin\Debug\DefaultDBPrac1.exe.config
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\bin\Debug\DefaultDBPrac1.exe
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\bin\Debug\DefaultDBPrac1.pdb
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\obj\Debug\DefaultDBPrac1.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\obj\Debug\DefaultDBPrac1.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\obj\Debug\DefaultDBPrac1.exe
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\DefaultDBPrac1\obj\Debug\DefaultDBPrac1.pdb
