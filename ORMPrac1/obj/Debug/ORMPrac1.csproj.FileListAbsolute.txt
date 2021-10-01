@@ -1,0 +1,5 @@
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\ORMPrac1\obj\Debug\ORMPrac1.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\ORMPrac1\obj\Debug\ORMPrac1.Form1.resources
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\ORMPrac1\obj\Debug\ORMPrac1.Properties.Resources.resources
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\ORMPrac1\obj\Debug\ORMPrac1.csproj.GenerateResource.cache
+C:\Users\Estudiante\Desktop\BASE DE DATOS 2\GITHUB\Prac1\ORMPrac1\obj\Debug\ORMPrac1.csproj.CoreCompileInputs.cache
