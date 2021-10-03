@@ -12,6 +12,7 @@ namespace ORMPrac1
 {
     public partial class Form1 : Form
     {
+        //defino espacio en memoria
         public List<Model.ALUMNO> oAlumno;
         public List<Model.APODERADO> oApoderado;
         public List<Model.CURSO> oCurso;
@@ -75,14 +76,14 @@ namespace ORMPrac1
             if (indice < 0)
                 indice = 0;
 
-            string cadena = "";
+            string cadena = ""; // textboxt esta en blanco, esta vacia
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
                     if (indice >= oAlumno.Count)
                         indice = oAlumno.Count - 1;
                 
-                    cadena = oAlumno[indice].Id.ToString() + "," + oAlumno.[indice].Nombre + ", de" + oAlumno[indice].Ciudad + "," + oAlumno[indice].Edad + "años";
+                    cadena = oAlumno[indice].Id.ToString() + "," + oAlumno.[indice].Nombre + ", de " + oAlumno[indice].Ciudad + "," + oAlumno[indice].Edad + "años";
                     break;
                 case 1:
                     if (indice >= oApoderado.Count)
@@ -93,7 +94,7 @@ namespace ORMPrac1
                         // se instancia el objeto alumno
                         oAlumno = db.ALUMNO.ToList();
 
-                        cadena = oApoderado[indice].Id.ToString() + "," + oApoderado[indice].Nombre + ", es de el|la apoderado|a de " + oAlumno.Find(a => a.Id == (int)oApoderado[indice].Id_Alumno).Nombre;
+                        cadena = oApoderado[indice].Id.ToString() + "," + oApoderado[indice].Nombre + ", es el|la apoderado|a de " + oAlumno.Find(a => a.Id == (int)oApoderado[indice].Id_Alumno).Nombre;
                         // de la tabla de apoderado muestra el id, el nombre
 
                     }
@@ -103,18 +104,20 @@ namespace ORMPrac1
                     if (indice >= oCurso.Count)
                         indice = oCurso.Count - 1;
                     cadena = oCurso[indice].Cod.ToString() + " , " + oCurso[indice].Nombre + " -- Fecha de inicio: " + oCurso[indice].Fecha_inicio + " -- Duracion: " + oCurso[indice].Duracion + "--Valor" + oCurso[indice].Valor;
+                    // muestra cod de la tabla cursos             muestra el nombre de la tabla cursos                  muestra la fecha_inicio                         muestra duracion                    muestra valor
                     break;
 
                 case 3:
                     if (indice >= oInscrito.Count)
                         indice = oInscrito.Count - 1;
 
-                    using (Model.DBPractica1Entities db = new Model.DBPractica1Entities())
+                    using (Model.DBPractica1Entities db = new Model.DBPractica1Entities()) // abro una conexion
                     {
-                        oAlumno = db.ALUMNO.ToList();
-                        oCurso = db.CURSO.ToList();
+                        oAlumno = db.ALUMNO.ToList(); //trae toda la tabla alumno , se llama la tabla
+                        oCurso = db.CURSO.ToList();   //en esta linea se trae toda la tabla curso
 
                         cadena = oInscrito[indice].Id.ToString() + " , " + oAlumno.Find(a => a.Id == (int)oInscrito[indice].Id_Alumno).Nombre + " estudia " + oCurso.Find(a => a.Cod == (int)oInscrito[indice].Cod_Curso);
+                        // muestra id de la tabla inscrito                busca el nombre de el alumno relacionado con el id de la tabla apoderado           busca el nombre del curso relacionado con el cod de la tabla inscrito
                      }
                     break;
 
