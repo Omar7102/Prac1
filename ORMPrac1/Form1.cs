@@ -81,17 +81,20 @@ namespace ORMPrac1
                 case 0:
                     if (indice >= oAlumno.Count)
                         indice = oAlumno.Count - 1;
+                
                     cadena = oAlumno[indice].Id.ToString() + "," + oAlumno.[indice].Nombre + ", de" + oAlumno[indice].Ciudad + "," + oAlumno[indice].Edad + "años";
                     break;
                 case 1:
                     if (indice >= oApoderado.Count)
                         indice = oApoderado.Count - 1;
-
+                    // se abre la conexion a la base de datos
                     using (Model.DBPractica1Entities db = new Model.DBPractica1Entities())
                     {
+                        // se instancia el objeto alumno
                         oAlumno = db.ALUMNO.ToList();
-                        cadena = oApoderado[indice].Id.ToString() + "," + oApoderado[indice].Nombre + ", es de el|la apoderado|a de " + oAlumno.Find(a => a.Id == (int)oApoderado[indice].Id_Alumno).Nombre;
 
+                        cadena = oApoderado[indice].Id.ToString() + "," + oApoderado[indice].Nombre + ", es de el|la apoderado|a de " + oAlumno.Find(a => a.Id == (int)oApoderado[indice].Id_Alumno).Nombre;
+                        // de la tabla de apoderado muestra el id, el nombre
 
                     }
                     break;
@@ -99,11 +102,20 @@ namespace ORMPrac1
                 case 2:
                     if (indice >= oCurso.Count)
                         indice = oCurso.Count - 1;
+                    cadena = oCurso[indice].Cod.ToString() + " , " + oCurso[indice].Nombre + " -- Fecha de inicio: " + oCurso[indice].Fecha_inicio + " -- Duracion: " + oCurso[indice].Duracion + "--Valor" + oCurso[indice].Valor;
                     break;
 
                 case 3:
                     if (indice >= oInscrito.Count)
                         indice = oInscrito.Count - 1;
+
+                    using (Model.DBPractica1Entities db = new Model.DBPractica1Entities())
+                    {
+                        oAlumno = db.ALUMNO.ToList();
+                        oCurso = db.CURSO.ToList();
+
+                        cadena = oInscrito[indice].Id.ToString() + " , " + oAlumno.Find(a => a.Id == (int)oInscrito[indice].Id_Alumno).Nombre + " estudia " + oCurso.Find(a => a.Cod == (int)oInscrito[indice].Cod_Curso);
+                     }
                     break;
 
             }
