@@ -13,7 +13,11 @@ namespace ORMPrac1
     public partial class Form1 : Form
     {
         //defino espacio en memoria
+
         public List<Model.ALUMNO> oAlumno;
+        /// <summary>
+        /// Instanciación de la tabla a
+        /// </summary>
         public List<Model.APODERADO> oApoderado;
         public List<Model.CURSO> oCurso;
         public List<Model.INSCRITO> oInscrito;
@@ -31,7 +35,7 @@ namespace ORMPrac1
             comboBox1.Items.Add("CURSO");
             comboBox1.Items.Add("INSCRITO");
         }
-
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (Model.DBPractica1Entities db = new Model.DBPractica1Entities())
@@ -39,10 +43,10 @@ namespace ORMPrac1
                 switch(comboBox1.SelectedIndex)
                 {
                     case 0:
-                        oAlumno = db.ALUMNO.ToList();
+                        oAlumno = db.ALUMNO.ToList(); // se trae toda la tabla alumno, se selecciona
                         break;
                     case 1:
-                        oApoderado = db.APODERADO.ToList();
+                        oApoderado = db.APODERADO.ToList(); // se trae la tabla apoderado
                         break;
                     case 2:
                         oCurso = db.CURSO.ToList();
@@ -70,7 +74,9 @@ namespace ORMPrac1
             indice++;
             Llenar();
         }
-
+        /// <summary>
+        /// Metodo para llenar el textbox con el i-registro de la j-tabla seleccionada en el combobox1
+        /// </summary>
         public void Llenar()
         {
             if (indice < 0)
