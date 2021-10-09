@@ -24,6 +24,7 @@ namespace ORMPrac1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // se llena el combobox
             comboBox1.Items.Add("ALUMNO");
             comboBox1.Items.Add("APODERADO");
             comboBox1.Items.Add("CURSO");
@@ -38,16 +39,16 @@ namespace ORMPrac1
                 switch(comboBox1.SelectedIndex)
                 {
                     case 0:
-                        oAlumno = db.ALUMNO.ToList();
+                        oAlumno = db.ALUMNO.ToList(); // se trae la tabla alumno
                         break;
                     case 1:
-                        oApoderado = db.APODERADO.ToList();
+                        oApoderado = db.APODERADO.ToList(); // se trae la tabla apoderado
                         break;
                     case 2:
-                        oCurso = db.CURSO.ToList();
+                        oCurso = db.CURSO.ToList(); // se tra la tabla curso
                         break;
                     case 3:
-                        oInscrito = db.INSCRITO.ToList();
+                        oInscrito = db.INSCRITO.ToList(); //se trae la inscrito
                         break;
                 }
             }
@@ -57,7 +58,7 @@ namespace ORMPrac1
 
             
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             indice--;
@@ -69,13 +70,15 @@ namespace ORMPrac1
             indice++;
             Llenar();
         }
-
+        /// <summary>
+        /// Metodo para llenar el textbox con el i_registro de la j_tabla seleccionada en el combobox1
+        /// </summary>
         public void Llenar()
         {
             if (indice < 0)
                 indice = 0;
 
-            string cadena = "";
+            string cadena = "";     //textboxt esta en blanco, esta vacia
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
@@ -87,18 +90,19 @@ namespace ORMPrac1
                 case 1:
                     if (indice >= oApoderado.Count)
                         indice = oApoderado.Count - 1;
-
+                    // se abre la conexion a la base de datos
                     using (Model.DBPractica1Entities db = new Model.DBPractica1Entities())
-                    {
+                    {   //se instancia el objeto alumno
                         oAlumno = db.ALUMNO.ToList();
                         cadena = oApoderado[indice].Id.ToString() + "," + oApoderado[indice].Nombre + ", es el|la apoderado|a de" + oAlumno.Find(a => a.Id == (int)oApoderado[indice].Id_Alumno).Nombre;
+                        // de la tabla de apoderado muestra el id, nombre
                     }
                     break;
                 case 2:
                     if (indice >= oCurso.Count)
                         indice = oCurso.Count - 1;
                     cadena = oCurso[indice].Cod.ToString() + "," + oCurso[indice].Nombre + "--Fecha de inicio:" + oCurso[indice].Fecha_inicio + "--Duracion:" + oCurso[indice].Duracion + "--Valor" + oCurso[indice].Valor;
-                    
+                    //muestra cod de la tabla cursos            muestra el nombre de la tabla cursos            muestra la fecha_inicio                         muestra duracion                        muestra valor
                     break;
 
                 case 3:
@@ -111,6 +115,7 @@ namespace ORMPrac1
                         oCurso = db.CURSO.ToList();     //trea toda la tabla curso
 
                         cadena = oInscrito[indice].Id.ToString() + "," + oAlumno.Find(a => a.Id == (int)oInscrito[indice].Id_Alumno).Nombre + "estudia" + oCurso.Find(a => a.Cod == (int)oInscrito[indice].Cod_Curso);
+                    //muestra id de la tabla inscrito                   busca el nombre de el alumno relacionado con el id de la tabla apoderado            busca el nombre del curso relacionado con el cod de la tabla inscrito
                     }
                     break;
             }
