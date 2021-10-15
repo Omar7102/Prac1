@@ -16,5 +16,26 @@ namespace ORMPrac2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (Model.DB2EntityContainer db = new Model.DB2EntityContainer())
+            {
+                var oAgents = db.AGENTS.ToList();
+                if (oAgents.Count > 0)
+                {
+                    MessageBox.Show("La base de datos ya contiene información", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //Todo
+                    //Se debe llenar la base de datos
+
+
+                    MessageBox.Show("La base de datos ha sido poblada con exito", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                button1.Enabled = false;
+            }
+        }
     }
 }
