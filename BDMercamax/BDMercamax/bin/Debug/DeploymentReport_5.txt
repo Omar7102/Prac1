@@ -1,0 +1,34 @@
+﻿** Aspectos destacados
+     Tablas que se volverán a compilar
+       Ninguno
+     Índices clúster que se van a quitar
+       restricción sin nombre en [dbo].[LugarStock]
+       restricción sin nombre en [dbo].[Venta]
+     Índices clúster que se van a crear
+       Ninguno
+     Posibles incidencias de datos
+       Se está quitando la columna [dbo].[Facturacion].[id_venta]; puede que se pierdan datos.
+       Se está quitando la columna [dbo].[LugarStock].[id_lugar]; puede que se pierdan datos.
+       Se está quitando la columna [dbo].[Venta].[id_venta]; puede que se pierdan datos.
+
+** Acciones del usuario
+     Cambiar nombre
+       [dbo].[Cliente].[direccion_cliente] (Columna)
+     Quitar
+       [dbo].[FK_Facturacion_ToTable_2] (Clave externa)
+       restricción sin nombre en [dbo].[LugarStock] (Clave principal)
+       restricción sin nombre en [dbo].[Venta] (Clave principal)
+     Modificar
+       [dbo].[Facturacion] (Tabla)
+       [dbo].[LugarStock] (Tabla)
+       [dbo].[Venta] (Tabla)
+
+** Acciones de compatibilidad
+     Actualizar
+       [dbo].[VerProductoBodega] (Procedimiento)
+       [dbo].[VerProductoGondola] (Procedimiento)
+
+Se está quitando la columna [dbo].[Facturacion].[id_venta]; puede que se pierdan datos.
+Se está quitando la columna [dbo].[LugarStock].[id_lugar]; puede que se pierdan datos.
+Se está quitando la columna [dbo].[Venta].[id_venta]; puede que se pierdan datos.
+

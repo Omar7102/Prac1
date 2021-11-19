@@ -4,7 +4,7 @@
     [nombre_apellido_cliente] NVARCHAR(MAX) NOT NULL, 
     [telefono_cliente] NVARCHAR(MAX) NOT NULL, 
     [email_cliente] NVARCHAR(MAX) NOT NULL, 
-    [direccion_cliengte] NVARCHAR(MAX) NOT NULL, 
+    [direccion_cliente] NVARCHAR(MAX) NOT NULL, 
     [fecha_nacimiento] DATE NOT NULL, 
     [puntos_acumulados] INT NOT NULL
 )
